@@ -1,9 +1,8 @@
-import React from "react";
-
-import Todo from "./Todo";
+import { useEffect, useState } from "react";
+import TodoItem, { TodoItemProps } from "./Todo";
 
 // rework this into regular api call, feel free to use any open api
-var todos = (): Promise<{ id: string; title: string }[]> =>
+var getTodos = (): Promise<TodoItemProps[]> =>
   new Promise((res) => {
     setTimeout(() => {
       res([
@@ -24,21 +23,21 @@ var todos = (): Promise<{ id: string; title: string }[]> =>
   });
 
 function App() {
-  const [state, setState] = React.useState<{ id: string; title: string }[]>([]);
+  const [todos, setTodos] = useState<TodoItemProps[]>([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     (async () => {
-      var awaitedTodos = await todos();
-      for (var i = 0; i < awaitedTodos.length; i++) {
-        setState([...state, awaitedTodos[i]]);
-      }
+      var awaitedTodos = await getTodos();
+      setTodos([...todos, ...awaitedTodos]);
     })();
-  });
+    // for now set only once
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div>
-      {state.map((todo) => (
-        <Todo todo={todo} />
+      {todos.map((todo) => (
+        <TodoItem key={todo.id} id={todo.id} title={todo.title} />
       ))}
     </div>
   );
