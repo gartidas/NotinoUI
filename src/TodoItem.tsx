@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useHistory } from "react-router";
 
 export interface TodoItemProps {
@@ -18,4 +19,4 @@ const TodoItem = ({ title, id }: TodoItemProps) => {
   );
 };
 
-export default TodoItem;
+export default memo(TodoItem);
