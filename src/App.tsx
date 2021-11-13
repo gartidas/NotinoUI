@@ -1,20 +1,18 @@
 import { Route, Switch, Redirect } from "react-router-dom";
-import TodoDetailPage from "./pages/TodoDetailPage";
-import TodosPage from "./pages/TodosPage";
+import TodoDetail from "./pages/todos/todo-detail";
+import Todos from "./pages/todos/todos";
 
 function App() {
   return (
-    <div>
-      <Switch>
-        <Route path="/todos" exact>
-          <TodosPage />
-        </Route>
-        <Route path="/todos/:id/detail" exact>
-          <TodoDetailPage />
-        </Route>
-        <Redirect to="/todos"></Redirect>
-      </Switch>
-    </div>
+    <Switch>
+      <Route path="/todos" exact>
+        <Todos />
+      </Route>
+      <Route path="/todos/:id/detail" exact>
+        <TodoDetail />
+      </Route>
+      <Redirect to="/todos"></Redirect>
+    </Switch>
   );
 }
 
