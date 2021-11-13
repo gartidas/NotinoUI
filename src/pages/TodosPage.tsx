@@ -1,5 +1,5 @@
-import TodoItem from "../app/components/TodoItem";
-import { useTodos } from "../app/contextProviders/TodosProvider";
+import TodoItem from "../components/TodoItem";
+import { useTodos } from "../contextProviders/TodosProvider";
 
 const TodosPage = () => {
   const { isLoading, todos } = useTodos();

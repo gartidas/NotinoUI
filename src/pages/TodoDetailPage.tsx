@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useParams } from "react-router";
-import { useTodos } from "../app/contextProviders/TodosProvider";
+import { useTodos } from "../contextProviders/TodosProvider";
 
 const TodoDetailPage = () => {
   const { id } = useParams<{ id: string }>();

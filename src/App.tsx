@@ -1,6 +1,6 @@
 import { Route, Switch, Redirect } from "react-router-dom";
-import TodoDetailPage from "./TodoDetailPage";
-import TodosPage from "./TodosPage";
+import TodoDetailPage from "./pages/TodoDetailPage";
+import TodosPage from "./pages/TodosPage";
 
 function App() {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import TodosProvider from "../app/contextProviders/TodosProvider";
+import TodosProvider from "./contextProviders/TodosProvider";
 
 ReactDOM.render(
   <React.StrictMode>
