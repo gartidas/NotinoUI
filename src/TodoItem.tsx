@@ -1,20 +1,20 @@
 import { memo } from "react";
 import { useHistory } from "react-router";
+import { ITodo } from "./domainTypes";
 
-export interface TodoItemProps {
-  id: string;
-  title: string;
+interface ITodoItemProps {
+  todo: ITodo;
 }
 
-const TodoItem = ({ title, id }: TodoItemProps) => {
+const TodoItem = ({ todo }: ITodoItemProps) => {
   const history = useHistory();
   const handleOnClick = () => {
-    history.push(`/todos/${id}/detail`);
+    history.push(`/todos/${todo.id}/detail`);
   };
 
   return (
     <div>
-      <div onClick={handleOnClick}>{title}</div>
+      <div onClick={handleOnClick}>{todo.title}</div>
     </div>
   );
 };
