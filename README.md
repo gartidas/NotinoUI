@@ -12,6 +12,10 @@ Here is sample code that is not by far ideal.
 6. Todo component has defined shouldComponentUpdate lifecycle, but it can be done better, adjust it
 7. Optional: rewrite Todo component to FC (choose if you want, prepare explanation)
 
+## Deployed site URL
+
+https://notino-todos.netlify.app/
+
 ## Source
 
 ### App.tsx
