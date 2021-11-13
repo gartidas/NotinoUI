@@ -1,7 +1,7 @@
-import TodoItem from "./TodoItem";
-import { useTodos } from "./TodosProvider";
+import TodoItem from "../app/components/TodoItem";
+import { useTodos } from "../app/contextProviders/TodosProvider";
 
-const Todos = () => {
+const TodosPage = () => {
   const { isLoading, todos } = useTodos();
 
   if (isLoading) return <div>Loading...</div>;
@@ -15,4 +15,4 @@ const Todos = () => {
   );
 };
 
-export default Todos;
+export default TodosPage;

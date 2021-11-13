@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ITodo } from "./domainTypes";
+import { ITodo } from "../domainTypes";
 
 export const getTodos = async (): Promise<ITodo[] | undefined> => {
   try {

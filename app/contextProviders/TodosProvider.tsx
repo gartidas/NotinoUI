@@ -6,8 +6,8 @@ import {
   useEffect,
   useState,
 } from "react";
-import { ITodo } from "./domainTypes";
-import * as todosService from "./todosService";
+import { ITodo } from "../domainTypes";
+import * as todosService from "../services/todosService";
 
 type ITodosContextValue = {
   isLoading: boolean;

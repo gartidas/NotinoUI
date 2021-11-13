@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useParams } from "react-router";
-import { useTodos } from "./TodosProvider";
+import { useTodos } from "../app/contextProviders/TodosProvider";
 
-const TodoDetail = () => {
+const TodoDetailPage = () => {
   const { id } = useParams<{ id: string }>();
   const { isLoading, selectedTodo, fetchTodoById } = useTodos();
 
@@ -19,4 +19,4 @@ const TodoDetail = () => {
   );
 };
 
-export default TodoDetail;
+export default TodoDetailPage;

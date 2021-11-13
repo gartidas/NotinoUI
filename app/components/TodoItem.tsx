@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { useHistory } from "react-router";
-import { ITodo } from "./domainTypes";
+import { ITodo } from "../domainTypes";
 
 interface ITodoItemProps {
   todo: ITodo;
